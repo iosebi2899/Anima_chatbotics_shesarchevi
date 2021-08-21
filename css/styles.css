@@ -312,6 +312,9 @@ main{
     font-family: 'nav-fira';
     cursor: pointer;
 }
+.submit:focus{
+    box-shadow: 0;
+}
 .orto{
     width: 525px;
     position: relative;
