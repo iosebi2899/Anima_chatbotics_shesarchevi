@@ -884,3 +884,12 @@ select{
     0 2.8px 2.2px rgba(0, 0, 0, 0.014),
     0 6.7px 5.3px rgba(0, 0, 0, 0.028);
 }
+.noSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
