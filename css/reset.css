@@ -51,6 +51,10 @@ input{
 	text-decoration: none;
 	background-color: transparent;
 	border: 0;
+	box-sizing: border-box;
+}
+select{
+	box-sizing: border-box;
 }
 button{
 	display: inline-block;
