@@ -767,12 +767,15 @@ select{
 .active-arrow{
     display: none;
 }
-#correct-region{
+#correct-region,#correct-position,#correct-email,#correct-name,#correct-surname{
     display: none;
     font-size: 13px;
     font-family: 'fira-regular';
     margin-top: -25px;
     color:#E74C3C;
+}
+.littledown{
+    margin-top: -15px !important;
 }
 .active-label{
     color:#E74C3C;
@@ -780,4 +783,7 @@ select{
 .active-select{
     border-color:#E74C3C !important;
     color: #E74C3C;
+}
+#position{
+    margin-bottom: 25px;
 }

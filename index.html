@@ -65,28 +65,33 @@
             </label>
             <p id="correct-region">გთხოვთ აირჩიოთ რეგიონი</p><br>
                   <!-- position -->
-                <label for="position">პოზიცია<span class="required">*</span><br>
+                <label class="positionv" for="position">პოზიცია<span class="required">*</span><br>
                     <img class="arrow2" src="img/arrow-down.svg" alt="arrow">
                 <select required onfocus='this.size=4;' onblur='this.size=0;' 
                   onchange='this.size=1; this.blur();' name="position" id="position" form="positionForm" class="minimal" >
-                      <option class="disabled-selected" disabled selected value value="chosen">აირჩიეთ პოზიცია</option>
+                      <option id="chosen2" class="disabled-selected" disabled selected value value="chosen">აირჩიეთ პოზიცია</option>
                       <hr>
                       <option class="bg" value="teacher">მასწავლებელი</option>
                       <option class="bg" value="samartaldamcveli">სამართალდამცავი</option>
                       <option class="bg" value="other">სხვა</option>
                 </select><br>
             </label>
+            <p id="correct-position" class="littledown">გთხოვთ აირჩიოთ პოზიცია</p><br>
                 <label class="other-position" for="other-position">სხვა პოზიცია<span class="required">*</span><br>
-                    <input type="text" id="other-position" class="main-input"></input></label> 
+                    <input type="text" id="other-position" class="main-input"></input>
                 <br>
+            </label> 
                 <label for="work-place">სამუშაო ადგილი</label><br>
                 <input type="text" name="work-place" id="work-place" class="main-input"></input><br>
-                <label for="email">ელ.ფოსტა <span class="required">*</span><br></label>
+                <label class="email" for="email">ელ.ფოსტა <span class="required">*</span><br></label>
                 <input required type="email" id="email" class="main-input"></input><br>
-                <label for="name">სახელი <span class="required">*</span><br></label> 
+                <p id="correct-email">გთხოვთ ჩაწეროთ ელ.ფოსტა</p><br>
+                <label class="name" for="name">სახელი <span class="required">*</span><br></label> 
                 <input required type="text" id="name" class="main-input"></input><br> 
-                <label for="surname">გვარი <span class="required">*</span><br></label> 
+                <p id="correct-name">გთხოვთ ჩაწეროთ სახელი</p><br>
+                <label class="surname" for="surname">გვარი <span class="required">*</span><br></label> 
                 <input required type="text" id="surname" class="main-input"></input><br>   
+                <p id="correct-name">გთხოვთ ჩაწეროთ გვარი</p><br>
                 <label for="pswd1">პაროლი <span class="required">*</span><br></label> 
                 <input required type="password" id="pswd1" class="main-input"></input><br>
                 <p class="message"></p>  

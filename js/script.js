@@ -37,6 +37,24 @@ $('.burger').click(function() {
     });
     $("#position").change(function() {
         $('.arrow2').removeClass('active-arrow');
+        $("#correct-position").css({"display":"none"});
+            $(".positionv").removeClass('active-label');
+            $("#position").removeClass('active-select');
+    });
+    $("#email").change(function() {
+        $("#correct-email").css({"display":"none"});
+            $(".email").removeClass('active-label');
+            $("#email").removeClass('active-select');
+    });
+    $("#name").change(function() {
+        $("#correct-name").css({"display":"none"});
+            $(".name").removeClass('active-label');
+            $("#name").removeClass('active-select');
+    });
+    $("#surname").change(function() {
+        $("#correct-surname").css({"display":"none"});
+            $(".surname").removeClass('active-label');
+            $("#surname").removeClass('active-select');
     });
     $("#position").blur(function() {
         $('.arrow2').removeClass('active-arrow');
@@ -50,6 +68,36 @@ $('.burger').click(function() {
             $(".regionform").addClass('active-select');
             $('html, body').animate({
                 scrollTop: $("#scrollable").offset().top
+            }, 500);
+        }else if($("#chosen2").is(":selected")){
+            $("#correct-position").css({"display":"block"});
+            $(".positionv").addClass('active-label');
+            $("#position").addClass('active-select');
+            $('html, body').animate({
+                scrollTop: $("#scrollable").offset().top
+            }, 500);
+        }else if(!$("#email").val()){
+            $("#correct-email").css({"display":"block"});
+            $(".email").addClass('active-label');
+            $("#email").addClass('active-select');
+            $('html, body').animate({
+                scrollTop: $("#position").offset().top
+            }, 500);
+        }
+        else if(!$("#name").val()){
+            $("#correct-name").css({"display":"block"});
+            $(".name").addClass('active-label');
+            $("#name").addClass('active-select');
+            $('html, body').animate({
+                scrollTop: $("#email").offset().top
+            }, 500);
+        }
+        else if(!$("#surname").val()){
+            $("#correct-surname").css({"display":"block"});
+            $(".surname").addClass('active-label');
+            $("#surname").addClass('active-select');
+            $('html, body').animate({
+                scrollTop: $("#email").offset().top
             }, 500);
         }
         else {
