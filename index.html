@@ -11,7 +11,7 @@
     <script src="https://kit.fontawesome.com/c22d0633e2.js" crossorigin="anonymous"></script>
     
 </head>
-<body>
+<body id="body">
     <header class="main-nav">
         <div>
             <img src="img/logo.png" alt="logo">
@@ -42,7 +42,8 @@
             <h1>რეგისტრაცია</h1>
             <h4>ავტორიზაცია შესაძლებელია მხოლოდ<br>განმანათლებლებისთვის</h4>
             <form action="" class="main-form">
-                <label for="region">რეგიონი <span class="required">*</span><br></label>
+                <label class="select" for="region">რეგიონი <span class="required">*</span><br>
+                    <img class="arrow" src="img/arrow-down.svg" alt="arrow">
                 <select required onfocus='this.size=5;' onblur='this.size=0;' 
                 onchange='this.size=1; this.blur();' name="region" id="region" form="regionForm" >
                     <option class="disabled-selected" disabled selected value>აირჩიეთ რეგიონი</option>
@@ -60,16 +61,19 @@
                     <option class="bg" value="samegrelo-zemosvaneti">ქვემო ქართლი</option>
                     <option class="bg" value="samtskhe-javakheti">შიდა ქართლი</option>
                 </select><br>
+            </label>
                   <!-- position -->
-                <label for="position">პოზიცია<span class="required">*</span><br></label>
+                <label for="position">პოზიცია<span class="required">*</span><br>
+                    <img class="arrow2" src="img/arrow-down.svg" alt="arrow">
                 <select required onfocus='this.size=4;' onblur='this.size=0;' 
-                  onchange='this.size=1; this.blur();' name="position" id="position" form="positionForm" >
+                  onchange='this.size=1; this.blur();' name="position" id="position" form="positionForm" class="minimal" >
                       <option class="disabled-selected" disabled selected value>აირჩიეთ რეგიონი</option>
                       <hr>
                       <option class="bg" value="teacher">მასწავლებელი</option>
                       <option class="bg" value="samartaldamcveli">სამართალდამცავი</option>
                       <option class="bg" value="other">სხვა</option>
                 </select><br>
+            </label>
                 <label class="other-position" for="other-position">სხვა პოზიცია<span class="required">*</span><br>
                     <input required type="text" id="other-position" class="main-input"></input></label> 
                 <br>

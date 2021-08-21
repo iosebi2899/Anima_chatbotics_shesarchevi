@@ -16,3 +16,25 @@ $('.burger').click(function() {
       }
     });
   });
+  $(function () {
+    $("#region").focus(function() {
+        $('.arrow').toggleClass('active-arrow');
+    });
+    $("#region").change(function() {
+        $('.arrow').toggleClass('active-arrow');
+    });
+  });
+  $(function () {
+    $("#position").focus(function() {
+        $('.arrow2').toggleClass('active-arrow');
+    });
+    $("#position").change(function() {
+        $('.arrow2').toggleClass('active-arrow');
+    });
+  });
+  $(function () {
+    $("#body").click(function() {
+        $('.arrow2').removeClass('active-arrow');
+        $('.arrow').removeClass('active-arrow');
+    });
+  });

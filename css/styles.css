@@ -218,6 +218,7 @@ main{
 .registration .main-form label{
     font-size: 16px;
     font-family: 'nav-fira';
+    position: relative;
 }
 .registration .main-form select{
     width: 525px;
@@ -748,7 +749,20 @@ select{
 }
 .arrow{
     position: absolute;
-    top: 13px;
+    top: 50px;
     transform: translateX(100%);
-    right: 13px ;
+    right: 38px ;
+}
+.arrow2{
+    position: absolute;
+    top: 50px;
+    transform: translateX(100%);
+    right: 38px ;
+}
+select{
+    background: transparent;
+    -webkit-appearance: none;
+}
+.active-arrow{
+    display: none;
 }
