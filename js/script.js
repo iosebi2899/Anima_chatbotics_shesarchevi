@@ -77,6 +77,23 @@ $('.burger').click(function() {
         $('.arrow2').removeClass('active-arrow');
     });
   });
+ function changetext(){
+     var name = document.getElementById("name").value;
+     var surname = document.getElementById("surname").value;
+     var region = document.getElementById("region").value;
+     var position = document.getElementById("position").value;
+     if(position=="other"){
+         position = document.getElementById("other-position").value;
+     }else{
+         position = position;
+     }
+     var email = document.getElementById("email").value;
+    document.getElementById("name.prop").innerHTML = name;
+    document.getElementById("surname.prop").innerHTML = surname;
+    document.getElementById("region.prop").innerHTML = region;
+    document.getElementById("position.prop").innerHTML = position;
+    document.getElementById("email.prop").innerHTML = email;
+ }
   $(function() {
     $("#submit").click(function() {
         if($("#chosen").is(":selected")) {
@@ -95,7 +112,7 @@ $('.burger').click(function() {
             $('html, body').animate({
                 scrollTop: $("#scrollable").offset().top
             }, 500);
-        }else if(!$("#email").val()){
+        }else if(!$("#email").val()||/@/.test($("#email").val())==false){
             $("#correct-email").css({"display":"block"});
             $(".email").addClass('active-label');
             $("#email").addClass('active-select');
@@ -141,12 +158,19 @@ $('.burger').click(function() {
             $("#fill-input").css({"display":"block"});
             $("#fill-input").html("გთხოვთ დაეთანხმოთ მოხმარების წესებს<br>და გაეცნოთ კონფიდენციალურობის პოლიტიკას");
         }
-        else if($("#rules").is(':checked') && $("#policy").is(':checked')){
-            $("#fill-input").css({"display":"none"});
-        }
         else {
-            $("#correct-region").css({"display":"none"});
+            $("#fill-input").css({"display":"none"});
+            window.scrollTo(0, 0);
+            $("#popup-bg").css({"display":"block"});
+            $("#body").css({"overflow":"hidden"});
+            changetext();
         }
+    });
+});
+$(function() {
+    $(".close").click(function() {
+    $("#popup-bg").css({"display":"none"});
+    $("#body").css({"overflow":"scroll"});
     });
 });
   
