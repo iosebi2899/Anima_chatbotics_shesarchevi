@@ -818,7 +818,7 @@ select{
     position: absolute;
     z-index: 999;
     top: 0;
-    bottom: 0;
+    bottom: -20%;
     left: 0;
     right: 0;
 }
@@ -832,7 +832,7 @@ select{
 #popup #content{
     position: absolute;
     left: 50%;
-    top: 50%;
+    top: -45px;
     transform: translate(-50%,-50%);
     background-color:white ;
     border-radius: 16px;
