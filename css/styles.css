@@ -278,7 +278,7 @@ main{
     border-style: solid;
     border-radius: 10px;
     margin-top: 13px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
     transition: all .2s ease-out;
     font-family: 'nav-fira';
     
@@ -767,11 +767,12 @@ select{
 .active-arrow{
     display: none;
 }
-#correct-region,#correct-position,#correct-email,#correct-name,#correct-surname{
+#correct-region,#correct-position,#correct-email,#correct-name,#correct-surname,#correct-pwd1,#correct-pwd2{
     display: none;
     font-size: 13px;
+    line-height: 17px;
     font-family: 'fira-regular';
-    margin-top: -25px;
+    margin-top: -20px;
     color:#E74C3C;
 }
 .littledown{
@@ -786,4 +787,11 @@ select{
 }
 #position{
     margin-bottom: 25px;
+}
+#fill-input{
+    display: none;
+    font-size: 13px;
+    color: #E74C3C;
+    font-family: 'fira-regular';
+    text-align: center;
 }

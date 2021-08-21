@@ -26,6 +26,7 @@ $('.burger').click(function() {
         $(".select").removeClass('active-label');
         $(".regionform").removeClass('active-select');
         $("#correct-region").css({"display":"none"});
+        $("#fill-input").css({"display":"none"});
     });
     $("#region").blur(function() {
         $('.arrow').removeClass('active-arrow');
@@ -40,21 +41,37 @@ $('.burger').click(function() {
         $("#correct-position").css({"display":"none"});
             $(".positionv").removeClass('active-label');
             $("#position").removeClass('active-select');
+            $("#fill-input").css({"display":"none"});
     });
     $("#email").change(function() {
         $("#correct-email").css({"display":"none"});
             $(".email").removeClass('active-label');
             $("#email").removeClass('active-select');
+            $("#fill-input").css({"display":"none"});
     });
     $("#name").change(function() {
         $("#correct-name").css({"display":"none"});
             $(".name").removeClass('active-label');
             $("#name").removeClass('active-select');
+            $("#fill-input").css({"display":"none"});
     });
     $("#surname").change(function() {
         $("#correct-surname").css({"display":"none"});
             $(".surname").removeClass('active-label');
             $("#surname").removeClass('active-select');
+            $("#fill-input").css({"display":"none"});
+    });
+    $("#pwd1").change(function() {
+        $("#correct-pwd1").css({"display":"none"});
+            $(".pwd1").removeClass('active-label');
+            $("#pwd1").removeClass('active-select');
+            $("#fill-input").css({"display":"none"});
+    });
+    $("#pwd2").change(function() {
+        $("#correct-pwd2").css({"display":"none"});
+            $(".pwd2").removeClass('active-label');
+            $("#pwd2").removeClass('active-select');
+            $("#fill-input").css({"display":"none"});
     });
     $("#position").blur(function() {
         $('.arrow2').removeClass('active-arrow');
@@ -66,6 +83,7 @@ $('.burger').click(function() {
             $("#correct-region").css({"display":"block"});
             $(".select").addClass('active-label');
             $(".regionform").addClass('active-select');
+            $("#fill-input").css({"display":"block"});
             $('html, body').animate({
                 scrollTop: $("#scrollable").offset().top
             }, 500);
@@ -73,6 +91,7 @@ $('.burger').click(function() {
             $("#correct-position").css({"display":"block"});
             $(".positionv").addClass('active-label');
             $("#position").addClass('active-select');
+            $("#fill-input").css({"display":"block"});
             $('html, body').animate({
                 scrollTop: $("#scrollable").offset().top
             }, 500);
@@ -80,6 +99,7 @@ $('.burger').click(function() {
             $("#correct-email").css({"display":"block"});
             $(".email").addClass('active-label');
             $("#email").addClass('active-select');
+            $("#fill-input").css({"display":"block"});
             $('html, body').animate({
                 scrollTop: $("#position").offset().top
             }, 500);
@@ -88,6 +108,7 @@ $('.burger').click(function() {
             $("#correct-name").css({"display":"block"});
             $(".name").addClass('active-label');
             $("#name").addClass('active-select');
+            $("#fill-input").css({"display":"block"});
             $('html, body').animate({
                 scrollTop: $("#email").offset().top
             }, 500);
@@ -96,48 +117,33 @@ $('.burger').click(function() {
             $("#correct-surname").css({"display":"block"});
             $(".surname").addClass('active-label');
             $("#surname").addClass('active-select');
+            $("#fill-input").css({"display":"block"});
             $('html, body').animate({
                 scrollTop: $("#email").offset().top
             }, 500);
+        }
+        else if(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{6,}$/.test($("#pwd1").val())==false){
+            $("#correct-pwd1").css({"display":"block"});
+            $(".pwd1").addClass('active-label');
+            $("#pwd1").addClass('active-select');
+            $("#fill-input").css({"display":"block"});
+        }
+        else if($("#pwd2").val()!=$("#pwd1").val()){
+            $("#correct-pwd2").css({"display":"block"});
+            $(".pwd2").addClass('active-label');
+            $("#pwd2").addClass('active-select');
+            $("#fill-input").css({"display":"block"});
+        }
+        else if(!$("#rules").is(':checked') || !$("#policy").is(':checked')){
+            $("#fill-input").css({"display":"block"});
+            $("#fill-input").html("გთხოვთ გაეცნოთ დაეთანხმოთ მოხმარების წესებს<br>და გაეცნოთ კონფიდენციალურობის პოლიტიკას");
+        }
+        else if($("#rules").is(':checked') && $("#policy").is(':checked')){
+            $("#fill-input").css({"display":"none"});
         }
         else {
             $("#correct-region").css({"display":"none"});
         }
     });
 });
-  function verifyPassword() {  
-    var pw = document.getElementById("pswd").value;  
-    //check empty password field  
-    if(pw == "") {  
-       document.getElementById("message").innerHTML = "გთხოვთ ჩაწეროთ პაროლი";  
-       return false;  
-    }  
-     
-   //minimum password length validation  
-    if(pw.length < 8) {  
-       document.getElementById("message").innerHTML = "**Password length must be atleast 8 characters";  
-       return false;  
-    }  
-    
-  //maximum length of password validation  
-    if(pw.length > 15) {  
-       document.getElementById("message").innerHTML = "**Password length must not exceed 15 characters";  
-       return false;  
-    } else {  
-       alert("Password is correct");  
-    }  
-  } 
-  $("#submit").submit(function(e) {
-});
-  $(function() {
-    $('#submit').on("submit", function() {
-      if (verifyPassword() == false) {
-        verifyPassword();
-        return false;
-      } else {
-        alert("Your code is saved");
-        return true;
-      }
-      preventDefault();
-    });
-  });
+  

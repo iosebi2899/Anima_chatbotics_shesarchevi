@@ -92,23 +92,24 @@
                 <label class="surname" for="surname">გვარი <span class="required">*</span><br></label> 
                 <input required type="text" id="surname" class="main-input"></input><br>   
                 <p id="correct-name">გთხოვთ ჩაწეროთ გვარი</p><br>
-                <label for="pswd1">პაროლი <span class="required">*</span><br></label> 
-                <input required type="password" id="pswd1" class="main-input"></input><br>
-                <p class="message"></p>  
-                <label for="paswd2">გაიმეორეთ პაროლი<span class="required">*</span><br></label> 
-                <input required type="password" id="pswd2" class="main-input"></input><br> 
+                <label class="pwd1" for="pwd1">პაროლი <span class="required">*</span><br></label> 
+                <input required type="password" id="pwd1" class="main-input"></input><br>
+                <p id="correct-pwd1">პაროლი უნდა შეიცავდეს მინიმუმ 6 სიმბოლოს<br>(პატარა ლათინური, დიდი ლათინური, ციფრი)<br></p><br>
+                <label class="pwd2" for="pwd2">გაიმეორეთ პაროლი<span class="required">*</span><br></label> 
+                <input required type="password" id="pwd2" class="main-input"></input><br> 
+                <p id="correct-pwd2">პაროლი არ ემთხვევა<br></p><br>
                 <label class="b-contain">
                     <span>ვეთანხმები პლატფორმის <a href="#" class="rules">მოხმარების წესებს</a></span>
-                    <input type="checkbox" required>
+                    <input id="rules" type="checkbox" required>
                     <div class="b-input"></div>
                 </label>
                 <label class="b-contain">
                     <span>გავეცანი <a href="#" class="rules">კონფიდენციალურობის პოლიტიკას</a></span>
-                    <input type="checkbox" required>
+                    <input id="policy" type="checkbox" required>
                     <div class="b-input"></div>
                 </label>
                 <button class="submit" id="submit" onclick="return false" value="რეგისტრაცია">რეგისტრაცია</button>
-                <p class="invalid-answers"></p>
+                <p id="fill-input">გთხოვთ შეავსოთ ყველა ველი</p>
             </form>
             <div class="orto">
                 <div class="or">
