@@ -127,6 +127,9 @@ $('.burger').click(function() {
             $(".pwd1").addClass('active-label');
             $("#pwd1").addClass('active-select');
             $("#fill-input").css({"display":"block"});
+            $('html, body').animate({
+                scrollTop: $("#surname").offset().top
+            }, 500);
         }
         else if($("#pwd2").val()!=$("#pwd1").val()){
             $("#correct-pwd2").css({"display":"block"});
@@ -136,7 +139,7 @@ $('.burger').click(function() {
         }
         else if(!$("#rules").is(':checked') || !$("#policy").is(':checked')){
             $("#fill-input").css({"display":"block"});
-            $("#fill-input").html("გთხოვთ გაეცნოთ დაეთანხმოთ მოხმარების წესებს<br>და გაეცნოთ კონფიდენციალურობის პოლიტიკას");
+            $("#fill-input").html("გთხოვთ დაეთანხმოთ მოხმარების წესებს<br>და გაეცნოთ კონფიდენციალურობის პოლიტიკას");
         }
         else if($("#rules").is(':checked') && $("#policy").is(':checked')){
             $("#fill-input").css({"display":"none"});
