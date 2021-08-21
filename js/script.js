@@ -49,7 +49,7 @@ $('.burger').click(function() {
             $(".select").addClass('active-label');
             $(".regionform").addClass('active-select');
             $('html, body').animate({
-                scrollTop: $(".select").offset().top
+                scrollTop: $("#scrollable").offset().top
             }, 500);
         }
         else {
