@@ -736,6 +736,7 @@ footer{
 }
 .disabled-selected{
     border-bottom: 1px solid rgba(32, 38, 49, 0.3);
+    color: rgba(112, 112, 112, 0.3) !important;
 }
 option:disabled {
     background-color: transparent !important;
@@ -765,4 +766,18 @@ select{
 }
 .active-arrow{
     display: none;
+}
+#correct-region{
+    display: none;
+    font-size: 13px;
+    font-family: 'fira-regular';
+    margin-top: -25px;
+    color:#E74C3C;
+}
+.active-label{
+    color:#E74C3C;
+}
+.active-select{
+    border-color:#E74C3C !important;
+    color: #E74C3C;
 }

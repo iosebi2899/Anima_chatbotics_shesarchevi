@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="css/stylesheet.css">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/c22d0633e2.js" crossorigin="anonymous"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
 </head>
 <body id="body">
     <header class="main-nav">
@@ -41,12 +42,12 @@
             <h6>მთავარი > რეგისტრაცია</h6>
             <h1>რეგისტრაცია</h1>
             <h4>ავტორიზაცია შესაძლებელია მხოლოდ<br>განმანათლებლებისთვის</h4>
-            <form action="" class="main-form">
+            <form action="" class="main-form" novalidate>
                 <label class="select" for="region">რეგიონი <span class="required">*</span><br>
                     <img class="arrow" src="img/arrow-down.svg" alt="arrow">
-                <select required onfocus='this.size=5;' onblur='this.size=0;' 
+                <select class="regionform" required onfocus='this.size=5;' onblur='this.size=0;' 
                 onchange='this.size=1; this.blur();' name="region" id="region" form="regionForm" >
-                    <option class="disabled-selected" disabled selected value>აირჩიეთ რეგიონი</option>
+                    <option id="chosen" class="disabled-selected" disabled selected value="chosen">აირჩიეთ რეგიონი</option>
                     <hr>
                     <option class="bg" value="tbilisi">თბილისი</option>
                     <option class="bg" value="apkhazia">აფხაზეთი</option>
@@ -60,14 +61,15 @@
                     <option class="bg" value="samtskhe-javakheti">სამცხე-ჯავახეთი</option>
                     <option class="bg" value="samegrelo-zemosvaneti">ქვემო ქართლი</option>
                     <option class="bg" value="samtskhe-javakheti">შიდა ქართლი</option>
-                </select><br>
+                </select>
             </label>
+            <p id="correct-region">გთხოვთ აირჩიოთ რეგიონი</p><br>
                   <!-- position -->
                 <label for="position">პოზიცია<span class="required">*</span><br>
                     <img class="arrow2" src="img/arrow-down.svg" alt="arrow">
                 <select required onfocus='this.size=4;' onblur='this.size=0;' 
                   onchange='this.size=1; this.blur();' name="position" id="position" form="positionForm" class="minimal" >
-                      <option class="disabled-selected" disabled selected value>აირჩიეთ რეგიონი</option>
+                      <option class="disabled-selected" disabled selected value value="chosen">აირჩიეთ პოზიცია</option>
                       <hr>
                       <option class="bg" value="teacher">მასწავლებელი</option>
                       <option class="bg" value="samartaldamcveli">სამართალდამცავი</option>
@@ -75,7 +77,7 @@
                 </select><br>
             </label>
                 <label class="other-position" for="other-position">სხვა პოზიცია<span class="required">*</span><br>
-                    <input required type="text" id="other-position" class="main-input"></input></label> 
+                    <input type="text" id="other-position" class="main-input"></input></label> 
                 <br>
                 <label for="work-place">სამუშაო ადგილი</label><br>
                 <input type="text" name="work-place" id="work-place" class="main-input"></input><br>
@@ -85,10 +87,11 @@
                 <input required type="text" id="name" class="main-input"></input><br> 
                 <label for="surname">გვარი <span class="required">*</span><br></label> 
                 <input required type="text" id="surname" class="main-input"></input><br>   
-                <label for="password">პაროლი <span class="required">*</span><br></label> 
-                <input required type="password" id="password" class="main-input"></input><br>  
-                <label for="password">გაიმეორეთ პაროლი<span class="required">*</span><br></label> 
-                <input required type="password" id="password" class="main-input"></input><br> 
+                <label for="pswd1">პაროლი <span class="required">*</span><br></label> 
+                <input required type="password" id="pswd1" class="main-input"></input><br>
+                <p class="message"></p>  
+                <label for="paswd2">გაიმეორეთ პაროლი<span class="required">*</span><br></label> 
+                <input required type="password" id="pswd2" class="main-input"></input><br> 
                 <label class="b-contain">
                     <span>ვეთანხმები პლატფორმის <a href="#" class="rules">მოხმარების წესებს</a></span>
                     <input type="checkbox" required>
@@ -99,7 +102,7 @@
                     <input type="checkbox" required>
                     <div class="b-input"></div>
                 </label>
-                <input class="submit" type="submit" value="რეგისტრაცია"></input>
+                <button class="submit" id="submit" onclick="return false" value="რეგისტრაცია">რეგისტრაცია</button>
                 <p class="invalid-answers"></p>
             </form>
             <div class="orto">
