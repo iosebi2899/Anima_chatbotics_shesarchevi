@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anima Chatbotics</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/c22d0633e2.js" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <header class="main-nav">
+        <div>
+            <img src="img/logo.png" alt="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active-nav-li nav-item">ჩვენზე</a></li>
+                <li><a href="#" class="nav-item">თემები</a></li>
+                <li><a href="#" class="nav-item">რესურსები</a></li>
+                <li><a href="#" class="login-button"><img src="img/user.svg" alt="user" class="user"> შესვლა</a></li>
+                <li><a href="" class="search-ico"><img src="img/search.svg" alt="search ico"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="registration">
+            <h6>მთავარი > რეგისტრაცია</h6>
+            <h1>რეგისტრაცია</h1>
+            <h4>ავტორიზაცია შესაძლებელია მხოლოდ<br>განმანათლებლებისთვის</h4>
+            <form action="" class="main-form">
+                <label for="region">რეგიონი <span class="required">*</span><br></label>
+                <select onfocus='this.size=5;' onblur='this.size=0;' 
+                onchange='this.size=1; this.blur();' name="region" id="region" form="regionForm" >
+                    <option disabled selected value>აირჩიეთ რეგიონი</option>
+                    <hr>
+                    <option class="bg" value="tbilisi">თბილისი</option>
+                    <option class="bg" value="apkhazia">აფხაზეთი</option>
+                    <option class="bg" value="adjara">აჭარა</option>
+                    <option class="bg" value="guria">გურია</option>
+                    <option class="bg" value="imereti">იმერეთი</option>
+                    <option class="bg" value="kakheti">კახეთი</option>
+                    <option class="bg" value="mtskheta-mtianeti">მცხეთა-მთიანეთი</option>
+                    <option class="bg" value="racha-lechxumi">რაჭა-ლეჩხუმი და ქვემო სვანეთი</option>
+                    <option class="bg" value="samegrelo-zemosvaneti">სამეგრელო-ზემო სვანეთი</option>
+                    <option class="bg" value="samtskhe-javakheti">სამცხე-ჯავახეთი</option>
+                    <option class="bg" value="samegrelo-zemosvaneti">ქვემო ქართლი</option>
+                    <option class="bg" value="samtskhe-javakheti">შიდა ქართლი</option>
+                </select><br>
+                  <!-- position -->
+                <label for="position">პოზიცია<span class="required">*</span><br></label>
+                <select onfocus='this.size=4;' onblur='this.size=0;' 
+                  onchange='this.size=1; this.blur();' name="position" id="position" form="positionForm" >
+                      <option disabled selected value>აირჩიეთ რეგიონი</option>
+                      <hr>
+                      <option class="bg" value="teacher">მასწავლებელი</option>
+                      <option class="bg" value="samartaldamcveli">სამართალდამცავი</option>
+                      <option class="bg" value="other">სხვა</option>
+                </select><br>
+                <label for="work-place">სამუშაო ადგილი</label><br>
+                <input type="text" name="work-place" id="work-place" class="main-input"></input><br>
+                <label for="email">ელ.ფოსტა <span class="required">*</span><br></label>
+                <input type="email" id="email" class="main-input"></input><br>
+                <label for="name">სახელი <span class="required">*</span><br></label> 
+                <input type="text" id="name" class="main-input"></input><br> 
+                <label for="surname">გვარი <span class="required">*</span><br></label> 
+                <input type="text" id="surname" class="main-input"></input><br>   
+                <label for="password">პაროლი <span class="required">*</span><br></label> 
+                <input type="password" id="password" class="main-input"></input><br>  
+                <label for="password">გაიმეორეთ პაროლი<span class="required">*</span><br></label> 
+                <input type="password" id="password" class="main-input"></input><br> 
+                <label class="b-contain">
+                    <span>ვეთანხმები პლატფორმის <a href="#" class="rules">მოხმარების წესებს</a></span>
+                    <input type="checkbox">
+                    <div class="b-input"></div>
+                </label>
+                <label class="b-contain">
+                    <span>გავეცანი <a href="#" class="rules">კონფიდენციალურობის პოლიტიკას</a></span>
+                    <input type="checkbox">
+                    <div class="b-input"></div>
+                </label>
+                <input class="submit" type="submit" value="რეგისტრაცია"></input>
+                <p class="invalid-answers"></p>
+                <div class="or">
+                    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+                    <p class="an">ან</p>
+                    <p>- - - - - - - - - - - - - - - - - - - - - - - - - - - -</p>
+                </div>
+                <button class="submit fb">რეგისტრაცია Facebook-ით</button><br>
+                <button class="submit gm">რეგისტრაცია Gmail-ით</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
